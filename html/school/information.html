@@ -1,0 +1,23 @@
+<div ng-controller="infoCtrl" ng-init="init()">
+    <div class="container-fluid" >
+        <div class="row text-center" style="margin-top:20px;">
+            <div class="col-md-4">
+                <p class="h4">标题</p>
+            </div>
+            <div class="col-md-4 col-md-offset-4">
+                <p class="h4">日期</p>
+            </div>
+        </div>
+
+        <div class="row text-center" style="border-top:1px solid #ccc" ng-repeat="item in schoolInfoData">
+            <div class="col-md-4 text-justify" style="padding:10px 0px 0px 0px;text-indent: 2em">
+                <a href="#" style="color:#8ec220;" ng-bind="item.msgContent" ng-click="open(item)"></a>
+            </div>
+            <div class="col-md-4 col-md-offset-4" style="padding:10px 0px 0px 0px;">
+                <p ng-bind="item.msgDate"></p>
+            </div>
+        </div>
+
+
+    </div>
+</div>

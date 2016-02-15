@@ -1,0 +1,33 @@
+
+<div class="modal-content" style="background-color:#d1d3d4;padding:20px;color:white;">
+    <div class="modal-header" style="background-color:#6d6e71;height:50px;">
+        <button class="close" style="width:30px;height:30px;border:1px solid white;border-radius:50%;background-color:white;opacity:1;padding-bottom:4px" type="button" data-dismiss="modal" aria-label="Close" ng-click="cancel()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" ng-bind="schoolInfoItem.msgContent"></h4>
+    </div>
+    <div class="modal-body" style="background-color:white;min-height:400px;color:black">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <p ng-bind="schoolInfoItem.remark1"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p ng-bind="schoolInfoItem.remark2"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p ng-bind="schoolInfoItem.remark3"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p ng-bind="schoolInfoItem.remark4"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

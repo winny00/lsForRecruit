@@ -1,0 +1,14 @@
+
+
+/*底部*/
+#sixpage .copyright a {
+    color:black;
+}
+
+.sixpage {
+    margin-top: 0px;
+    height: 80px;
+    text-align: right;
+    line-height: 80px;
+    border-top:1px solid #ccc;
+}

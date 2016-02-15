@@ -1,0 +1,28 @@
+<style>
+    .divOpacity{
+        background-color:#f6f6f6;
+        opacity:1;
+    }
+</style>
+<div class="modal-content divOpacity">
+    <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close" ng-click="cancel()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">&nbsp;</h4>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div>
+                <carousel interval="">
+                    <slide ng-repeat="slide in photoData">
+                        <img ng-src="{{slide.src}}" style="margin:auto;height:450px;width:300px;">
+                        <div class="carousel-caption">
+                            <p></p>
+                        </div>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </div>
+</div>

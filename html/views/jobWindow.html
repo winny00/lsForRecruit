@@ -1,0 +1,56 @@
+<style>
+    #schoolJob .row{
+        margin-bottom:10px;
+    }
+</style>
+<div class="modal-content" style="background-color:#d1d3d4;padding:20px;color:white;" id="schoolJob">
+    <div class="modal-header" style="background-color:#6d6e71;height:50px;">
+        <button class="close" style="width:30px;height:30px;border:1px solid white;border-radius:50%;background-color:white;opacity:1;padding-bottom:4px" type="button" data-dismiss="modal" aria-label="Close" ng-click="cancel()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" ng-bind="schooJobData.job"></h4>
+    </div>
+    <div class="modal-body" style="background-color:white;min-height:400px;color:black">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    职位名称:&nbsp;&nbsp;<span style="color:#8ec220" ng-bind="schooJobData.job"></span>
+                </div>
+                <div class="col-md-3">
+                    工作地点:&nbsp;&nbsp;<span style="color:#8ec220" ng-bind="schooJobData.jobPlace"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    职位类别:&nbsp;&nbsp;<span style="color:#8ec220" ng-bind="schooJobData.jobType"></span>
+                </div>
+                <div class="col-md-3">
+                    招聘渠道:&nbsp;&nbsp;<span style="color:#8ec220" >网络</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    工作职责:
+                   <span ng-repeat="jobdesc in schooJobData.jobDesc">
+                       <p ng-bind="jobdesc"></p>
+                   </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    工作要求:
+                    <span ng-repeat="demand in schooJobData.jobDemand">
+                       <p ng-bind="demand"></p>
+                   </span>
+                </div>
+            </div>
+            <div class="row text-center">
+                <a href="mailto:hr@lifesense.com">
+                    <button type="button" class="btn btn-success btn-sm">投个简历</button>
+                </a>
+                <p>请发送简历到hr@lifesense.com,注明岗位+姓名</p>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

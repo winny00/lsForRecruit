@@ -1,0 +1,289 @@
+@-webkit-keyframes bounceIn-infinite {
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+
+    20% {
+        -webkit-transform: translate(0, 3px);
+    }
+
+    50% {
+        -webkit-transform: translate(0, 0);
+    }
+
+    70% {
+        -webkit-transform: translate(0, -3px);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0);
+    }
+}
+
+@-moz-keyframes bounceIn-infinite {
+    0% {
+        -moz-transform: translate(0, 0);
+    }
+
+    20% {
+        -moz-transform: translate(0, 3px);
+    }
+
+    50% {
+        -moz-transform: translate(0, 0);
+    }
+
+    70% {
+        -moz-transform: translate(0, -3px);
+    }
+
+    100% {
+        -moz-transform: translate(0, 0);
+    }
+}
+
+@-o-keyframes bounceIn-infinite {
+0%
+
+{
+    -o-transform: translate(0, 0);
+}
+
+20% {
+    -o-transform: translate(0, 3px);
+}
+
+50% {
+    -o-transform: translate(0, 0);
+}
+
+70% {
+    -o-transform: translate(0, -3px);
+}
+
+100% {
+    -o-transform: translate(0, 0);
+}
+
+}
+
+@keyframes bounceIn-infinite {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(0, 5px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    70% {
+        transform: translate(0, -5px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@-webkit-keyframes bounceIn-infinite2 {
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+
+    20% {
+        -webkit-transform: translate(0, 8px);
+    }
+
+    50% {
+        -webkit-transform: translate(0, 0);
+    }
+
+    70% {
+        -webkit-transform: translate(0, -8px);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0);
+    }
+}
+
+@-moz-keyframes bounceIn-infinite2 {
+    0% {
+        -moz-transform: translate(0, 0);
+    }
+
+    20% {
+        -moz-transform: translate(0, 8px);
+    }
+
+    50% {
+        -moz-transform: translate(0, 0);
+    }
+
+    70% {
+        -moz-transform: translate(0, -8px);
+    }
+
+    100% {
+        -moz-transform: translate(0, 0);
+    }
+}
+
+@-o-keyframes bounceIn-infinite2 {
+0%
+
+{
+    -o-transform: translate(0, 0);
+}
+
+20% {
+    -o-transform: translate(0, 8px);
+}
+
+50% {
+    -o-transform: translate(0, 0);
+}
+
+70% {
+    -o-transform: translate(0, -8px);
+}
+
+100% {
+    -o-transform: translate(0, 0);
+}
+
+}
+
+@keyframes bounceIn-infinite2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(0, 8px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    70% {
+        transform: translate(0, -8px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+.bounceIn-infinite {
+    animation: bounceIn-infinite 4s linear infinite;
+    -webkit-animation: bounceIn-infinite 4s linear infinite;
+    -moz-animation: bounceIn-infinite 4s linear infinite;
+    -o-animation: bounceIn-infinite 4s linear infinite;
+    -ms-animation: bounceIn-infinite 4s linear infinite;
+}
+
+.bounceIn-infinite2 {
+    animation: bounceIn-infinite2 4s linear infinite;
+    -webkit-animation: bounceIn-infinite2 4s linear infinite;
+    -moz-animation: bounceIn-infinite2 4s linear infinite;
+    -o-animation: bounceIn-infinite2 4s linear infinite;
+    -ms-animation: bounceIn-infinite2 4s linear infinite;
+}
+
+.bounceIn-infinite3 {
+    animation: bounceIn-infinite2 6s linear infinite;
+    -webkit-animation: bounceIn-infinite2 6s linear infinite;
+    -moz-animation: bounceIn-infinite2 6s linear infinite;
+    -o-animation: bounceIn-infinite2 6s linear infinite;
+    -ms-animation: bounceIn-infinite2 6s linear infinite;
+}
+
+@-webkit-keyframes bounceIn-hover {
+    0% {
+        -webkit-transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.16);
+    }
+
+    80% {
+        -webkit-transform: scale(1.03);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes bounceIn-hover {
+    0% {
+        -moz-transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.16);
+    }
+
+    80% {
+        -moz-transform: scale(1.03);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+
+@-o-keyframes bounceIn-hover {
+0%
+
+{
+    -o-transform: scale(1);
+}
+
+50% {
+    -o-transform: scale(1.16);
+}
+
+80% {
+    -o-transform: scale(1.03);
+}
+
+100% {
+    -o-transform: scale(1);
+}
+
+}
+
+@keyframes bounceIn-hover {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.16);
+    }
+
+    80% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bounceIn-hover {
+    animation: bounceIn-hover 1s linear infinite;
+    -webkit-animation: bounceIn-hover 1s linear infinite;
+    -moz-animation: bounceIn-hover 1s linear infinite;
+    -o-animation: bounceIn-hover 1s linear infinite;
+    -ms-animation: bounceIn-hover 1s linear infinite;
+}

@@ -1,0 +1,20 @@
+
+<div class="container-fluid" ng-controller="lsHeader">
+    <div class="nav-logo">
+        <div class="logo-img">
+            <a><img src="./img/logo.png"></a>
+        </div>
+        <div class="logo-nav">
+            <ul class="nav navbar-nav">
+                <li ><a href="#ls/home" ng-class="{bgColor:headIndex==0}" ng-click="clickHead(0)"><span>首页</span></a></li>
+                <li ><a href="#ls/sociology" ng-class="{bgColor:headIndex==1}" ng-click="clickHead(1)"><span>社会招聘</span></a></li>
+                <li ><a href="#ls/school/info" ng-class="{bgColor:headIndex==2}" ng-click="clickHead(2)"><span>校园招聘</span></a></li>
+                <li ><a href="#ls/about/pro" ng-class="{bgColor:headIndex==3}" ng-click="clickHead(3)"><span>关于乐心</span></a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>

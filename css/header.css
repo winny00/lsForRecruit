@@ -1,0 +1,61 @@
+
+/*顶部*/
+.head{
+    width: 100%;
+    height: 80px;
+    border-bottom:1px solid #ccc;
+    z-index: 20;
+    padding-left:85px;
+    padding-right:85px;
+    background-color:#f6f7fb;
+}
+.nav-logo ul{
+    list-style-type: none;
+    padding:0px;
+    margin: 0px;
+    height:100%;
+    vertical-align: bottom;
+    right:0px;
+    float: right;
+
+}
+
+
+.nav-logo{
+    display:table;
+    width:100%;
+    height:80px;
+}
+.nav-logo div.logo-img,
+.nav-logo div.logo-nav{
+    display:table-cell;
+    vertical-align: middle;
+}
+
+.nav-logo div.logo-img img{
+    width:120px;
+
+}
+.logo-nav ul.navbar-nav li{
+    height:100%;
+}
+.logo-nav ul.navbar-nav li a{
+    height:100%;
+    text-align: center;
+    color:black;
+}
+.logo-nav ul.navbar-nav li a span{
+    display:block;
+    height:100%;
+    width:100%;
+    font-size: 16px;
+    vertical-align: bottom;
+    padding-top:20px;
+}
+.logo-nav ul.navbar-nav li a:hover{
+    background: #8ec220;
+    color: #1c1d1e;
+}
+.logo-nav ul.navbar-nav li a.bgColor{
+    background-color: #8ec220;
+}

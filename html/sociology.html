@@ -1,0 +1,153 @@
+<style>
+    #scociology .bg{
+        background-color:white;
+        min-height:800px;
+        height:auto;
+    }
+    #scociology .bg2{
+        background-color:#f6f6f6;
+        min-height:800px;
+        height:auto;
+        padding:0px;
+    }
+    #scociology #sociology-table a{
+        color:black;
+    }
+
+    #scociology #sociology-table .jobMargin{
+        margin-top: 5px;
+    }
+    #scociology table thead tr th{
+        border-bottom:1px;
+        height:40px;
+        line-height: 40px;
+        background-color:#f6f7fb;
+        text-indent: 2em;
+
+    }
+    #scociology #sociology-table .jobRightBorder{
+        border-right: 2px solid #ccc;
+    }
+    #scociology #sociology-table a:hover{
+        color:#8ec220;
+        text-decoration: none;
+    }
+
+    #scociology table tbody tr td{
+        text-indent:3em;
+    }
+    #scociology table tbody tr td a{
+        color:black;
+        text-decoration: none;
+    }
+    #scociology table tbody tr td a:hover{
+        color:#8ec220;
+    }
+    #scociology #sociology-table .jobFontBgColor a{
+        color:#8ec220;
+        text-decoration: none;
+    }
+</style>
+<link type="text/css" href="./css/view/scociology.css" rel="stylesheet">
+
+
+<div class="container" id="scociology" ng-controller="sociologyCtrl" style="padding-top:20px;" ng-init="init()">
+    <div class="row">
+        <div class="col-md-2 col-xs-2">
+            <nav>
+                <ul class="lsUlStyle text-center">
+                    <li>热门招聘信息</li>
+                    <div ng-repeat="item in selectHotJob">
+                        <li><a href="#" ng-bind="item.job" ng-click="selectNavVal(item.job,0)" ng-class="{fontColor:item.job == selectNavStatus && selectType == 0}"></a></li>
+                    </div>
+                </ul>
+            </nav>
+            <nav style="margin-top: 20px;">
+                <ul class="lsUlStyle text-center">
+                    <li>最新招聘信息</li>
+                    <div ng-repeat="item in selectNewJob">
+                        <li><a href="#" ng-bind="item.job" ng-click="selectNavVal(item.job,1)" ng-class="{fontColor:item.job == selectNavStatus && selectType == 1}"></a></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-10 col-xs-10 bg2">
+            <div class="container-fluid" style="padding:0px;">
+                <div class="row" style="padding:20px 20px;background-color:white;margin:0px 0px;" id="sociology-table">
+                    <div class="col-md-12 jobMargin">
+                        <div class="col-md-1 text-right" style="padding:0px">工作地点:</div>
+                        <div class="col-md-11">
+                            <div class="row">
+                                <div class="col-md-1 jobRightBorder text-center" style="padding:0px;" ng-repeat="item in selectJob.jobPlace" ng-class="{jobFontBgColor:item==selectParam.placeVal}">
+                                    <a href="#" ng-bind="item" ng-click="clickJobPlace(0,item)"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 jobMargin">
+                        <div class="col-md-1 text-right" style="padding:0px">职位类别:</div>
+                        <div class="col-md-11">
+                            <div class="row">
+                                <div class="col-md-1 jobRightBorder text-center" style="padding:0px;" ng-repeat="item in selectJob.jobType" ng-class="{jobFontBgColor:item==selectParam.typeVal}">
+                                    <a href="#" ng-bind="item" ng-click="clickJobPlace(1,item)"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 jobMargin">
+                        <div class="col-md-1 text-right" style="padding:0px">产品类:</div>
+                        <div class="col-md-11">
+                            <div class="row">
+                                <div class="col-md-1 jobRightBorder text-center" style="padding:0px;" ng-repeat="item in selectJob.jobProduct" ng-class="{jobFontBgColor:item==selectParam.productVal}">
+                                    <a href="#" ng-bind="item" ng-click="clickJobPlace(2,item)"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="background-color:white;margin:20px 10px 0px 0px;height:550px;position:relative;">
+                    <div class="col-md-12 col-xs-12">
+                        <table class="table table-hover" style="border:1px solid #ccc;margin-top:10px;">
+                            <thead >
+                            <tr>
+                                <th style="width:50%">职位名称</th>
+                                <th style="width:25%">职位类别</th>
+                                <th style="width:25%">职位地点</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="item in jobData |filterJob:selectParam | paging:tableParam.page:tableParam.pageSize ">
+                                <td><a href="#" ng-bind="item.job" ng-click="open(item)"></a></td>
+                                <td ng-bind="item.jobType"></td>
+                                <td ng-bind="item.jobPlace"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                    <div class="col-md-12" style="position:absolute; bottom:35px;">
+                        <div class="row">
+                            <div class="col-md-6 col-xs-6" style="margin-top:25px;">
+                                当前第<span ng-bind="tableParam.page"></span>页<span ng-bind="tableParam.pageSize"></span>条记录,总<span ng-bind="totalItems"></span>条记录
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <pagination total-items="totalItems"
+                                            ng-model="tableParam.page" max-size="5"
+                                            items-per-page="tableParam.pageSize"
+                                            class="pagination-sm pull-right" boundary-links="true"
+                                            first-text="首页" previous-text="上一页" next-text="下一页" last-text="尾页">
+                                </pagination>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

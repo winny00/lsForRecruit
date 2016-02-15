@@ -1,0 +1,19 @@
+<link type="text/css" href="./css/view/about.css" rel="stylesheet">
+
+<div class="container" id="about" ng-controller="aboutCtrl" style="padding-top:20px;">
+    <div class="row">
+        <div class="col-md-2">
+            <nav>
+                <ul class="text-center">
+                    <li><a href="#ls/about/pro" ng-class="{fontColor:menuIndex==0}" class="fontColor" ng-click="menuClick(0)">公司简介</a></li>
+                    <li><a href="#ls/about/culture" ng-class="{fontColor:menuIndex==1}" ng-click="menuClick(1)">乐心文化</a></li>
+                    <li><a href="#ls/about/person" ng-class="{fontColor:menuIndex==2}" ng-click="menuClick(2)">人在乐心</a></li>
+                    <li><a href="#ls/about/contactus" ng-class="{fontColor:menuIndex==3}" ng-click="menuClick(3)">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-10" style="background-color:white;">
+            <div ui-view="about"></div>
+        </div>
+    </div>
+</div>

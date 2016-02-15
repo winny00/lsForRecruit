@@ -1,0 +1,32 @@
+<style>
+    #school .bg{
+        background-color:white;
+        min-height:800px;
+        height:auto;
+    }
+    #school .bg2{
+        background-color:#f6f6f6;
+        min-height:800px;
+        height:auto;
+        padding:0px;
+    }
+</style>
+<link type="text/css" href="./css/view/school.css" rel="stylesheet">
+
+
+<div class="container" id="school" ng-controller="schoolCtrl" style="padding-top:20px;">
+    <div class="row">
+        <div class="col-md-2 col-xs-2">
+            <nav>
+                <ul class="lsUlStyle text-center">
+                    <li><a href="#ls/school/info" ng-class="{fontColor:menuIndex==0}" class="fontColor" ng-click="menuClick(0)">招聘信息</a></li>
+                    <li><a href="#ls/school/process" ng-class="{fontColor:menuIndex==1}" ng-click="menuClick(1)">招聘流程</a></li>
+                    <li><a href="#ls/school/job" ng-class="{fontColor:menuIndex==2}" ng-click="menuClick(2)">招聘岗位</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-10 col-xs-10 bg" ng-class="{bg2:menuIndex==2}">
+            <div ui-view="school"></div>
+        </div>
+    </div>
+</div>

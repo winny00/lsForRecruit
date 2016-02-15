@@ -1,0 +1,40 @@
+<style>
+    #person .picMargin{
+        margin:10px 0px;
+    }
+    #person .picMargin img{
+        border:2px solid #ccc;
+    }
+    
+</style>
+<div class="container-fluid" id="person" ng-init="init()">
+    <div class="row" style="margin-top:20px">
+        <div class="col-md-12 text-center">
+            <img src="./img/comp.png" alt="comp"/>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <p>团队风采</p>
+            <p style="color:#8ec220">使命</p>
+            <p>以创新引领优质生活;</p>
+            <p style="color:#8ec220">愿景</p>
+            <p>在健康领域成为全球知名品牌;</p>
+            <p style="color:#8ec220">创新</p>
+            <p>体验以科技创新造福大众带来的真正快乐;</p>
+            <p>以负责任的态度对待自己、家人、同事、商业伙伴乃至整个社会;</p>
+            <p>对目标信念的不懈坚持，对完美细节的执着追求.</p>
+        </div>
+    </div>
+    <br/>
+    <hr/>
+    <div class="row">
+        <div class="col-md-4 text-center picMargin" ng-repeat="item in picList" ng-click="open(picList)">
+            <img ng-src="{{item.src}}" alt=""/>
+        </div>
+    </div>
+    <div class="row">
+
+    </div>
+</div>

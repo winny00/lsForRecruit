@@ -1,0 +1,28 @@
+
+
+#scociology ul.lsUlStyle{
+    list-style-type: none;
+    padding:0px 10px;
+    margin:0px;
+    background-color:white;
+}
+#scociology ul.lsUlStyle li{
+    height:40px;
+    line-height: 40px;
+    border-bottom: 2px solid #f6f6f6;
+
+}
+#scociology ul.lsUlStyle li a{
+    color:#858585;
+    width:100%;
+    display: block;
+}
+#scociology ul.lsUlStyle li a:hover{
+    color:#8dc21f;
+    text-decoration: none;
+}
+
+#scociology ul.lsUlStyle li a.fontColor{
+    color:#8dc21f;
+    text-decoration: none;
+}

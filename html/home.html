@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="./css/animation.css"/>
+<link type="text/css" href="./css/view/home.css" rel="stylesheet">
+
+
+<div ng-controller="homeCtrl" style="background-color:white">
+    <div>
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+
+                </div>
+            </slide>
+        </carousel>
+    </div>
+    <div class="container" style="padding:20px 0px">
+        <div class="row" >
+            <div class="col-md-12 text-center h4">
+                乐心员工不只创造产品,他们的奇思妙想更引领着整个行业的潮流.员工多样化的背景带来了思想的碰撞,
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-md-12 text-center h4">
+                从令人惊叹的科技到业界领先的环保措施,我们所做的一切都闪耀着他们的灵感与创新.
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-md-12 text-center h4">
+                加入乐心,和我们一道让世界变得更美好
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding:20px 0px;position: relative">
+        <div class="row" >
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="ball_1_bg" ng-class="(ball_1_on)?'ball_on bounceIn-hover':'ball_off'"></div>
+                <div class="ball_1" ng-class="(ball_1_on)?'':'bounceIn-infinite'" ng-Mouseenter="ball_1_on=true"
+                     ng-Mouseleave="ball_1_on=flase">
+                    <a>
+                        <img ng-src="img/if.png" alt=""/>
+                    </a>
+                </div>
+                <div class="text-div">
+                    <div>多款产品</div>
+                    <div>荣获if大奖</div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="ball_2_bg" ng-class="(ball_2_on)?'ball_on bounceIn-hover':'ball_off'"></div>
+                <div class="ball_2" ng-class="(ball_2_on)?'':'bounceIn-infinite'" ng-Mouseenter="ball_2_on=true"
+                     ng-Mouseleave="ball_2_on=flase">
+                    <a>
+                        <img ng-src="img/no1.png" alt=""/>
+                    </a>
+                </div>
+                <div class="text-div">
+                    <div>智能称</div>
+                    <div>行业销量第一</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="ball_3_bg" ng-class="(ball_3_on)?'ball_on bounceIn-hover':'ball_off'"></div>
+                <div class="ball_3" ng-class="(ball_3_on)?'':'bounceIn-infinite'" ng-Mouseenter="ball_3_on=true"
+                     ng-Mouseleave="ball_3_on=flase">
+                    <a>
+                        <img ng-src="img/no2.png" alt=""/>
+                    </a>
+                </div>
+                <div class="text-div">
+                    <div>运动手环</div>
+                    <div>行业销量第二</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="ball_4_bg" ng-class="(ball_4_on)?'ball_on bounceIn-hover':'ball_off'"></div>
+                <div class="ball_4" ng-class="(ball_4_on)?'':'bounceIn-infinite'" ng-Mouseenter="ball_4_on=true"
+                     ng-Mouseleave="ball_4_on=flase">
+                    <a>
+                        <img ng-src="img/apple.png" alt=""/>
+                    </a>
+                </div>
+                <div class="text-div">
+                    <div>苹果</div>
+                    <div>线下合作伙伴</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container" style="position: relative;">
+        <div class="row margin-style">
+            <div class="col-md-12">
+
+                <a href="#ls/about/pro" class="a-style">了解乐心更多
+                    <img ng-src="img/point-right.png" alt=""/>
+                </a>
+            </div>
+        </div>
+        <div class="row margin-style" style="margin-bottom:20px">
+            <div class="col-md-12">
+                <p class="text-center">
+                    <span style="font-size: 16px">你认为自己更适合乐心的哪一方面的工作呢?</span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" >
+                <a href="#ls/sociology" class="pic-style text-center">
+                    <img ng-src="img/school.png" alt=""/>
+                    <p>社会招聘</p>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#ls/school/info" class="pic-style text-center">
+                    <img ng-src="img/society.png" alt=""/>
+                    <p>校园招聘</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,29 @@
+
+
+#about ul{
+    list-style-type: none;
+    padding:0px;
+    margin:0px;
+    background-color:white;
+}
+#about ul li{
+    height:40px;
+    line-height: 40px;
+    border-bottom: 1px solid #f6f6f6;
+
+}
+#about ul li a{
+    color:#858585;
+    width:100%;
+    display: block;
+}
+#about ul li a:hover{
+    color:#8dc21f;
+    text-decoration: none;
+}
+
+#about ul li a.fontColor{
+    color:#8dc21f;
+    text-decoration: none;
+}
+
